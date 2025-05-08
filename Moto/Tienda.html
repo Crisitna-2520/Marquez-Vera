@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TIENDA</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        ul.navbar {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            background-color: #aa3b3b;
+            display: flex;
+            justify-content: center;
+        }
+
+        ul.navbar li {
+            display: inline;
+        }
+
+        ul.navbar li a {
+            display: inline-block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+
+        ul.navbar li a:hover {
+            background-color: #ce7a7a;
+        }
+
+        h1 {
+            text-align: center;
+            color: #aa3b3b;
+        }
+
+        ul.products {
+            list-style-type: none;
+            text-align: center;
+            padding: 0;
+        }
+
+        ul.products li {
+            margin: 20px 0;
+        }
+
+        ul.products li a {
+            font-size: 18px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        ul.products li a:hover {
+            color: #aa3b3b;
+        }
+
+        /* Estilos para el botón de menú */
+        .menu-button {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 15px;
+            text-align: center;
+            background-color: #aa3b3b;
+            color: white;
+            font-size: 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .menu-button:hover {
+            background-color: #ce7a7a;
+        }
+
+        /* Estilos para el menú desplegable */
+        .menu-options {
+            display: none;
+            list-style-type: none;
+            text-align: center;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .menu-options li {
+            margin: 10px 0;
+        }
+
+        .menu-options li a {
+            font-size: 18px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .menu-options li a:hover {
+            color: #aa3b3b;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <ul class="navbar">
+        <li><a href="Home.html">INICIO</a></li>
+        <li><a href="Tienda.html">TIENDA</a></li>
+        <li><a href="acercade.html">ACERCA DE</a></li>
+        <li><a href="servicios.html">SERVICIOS</a></li>
+        <li><a href="contacto.html">CONTACTO</a></li>
+    </ul>
+
+    <h1>Selecciona tu producto</h1>
+
+    <!-- Botón para mostrar el menú -->
+    <button class="menu-button" onclick="toggleMenu()">Menú</button>
+
+    <!-- Menú desplegable -->
+    <ul class="menu-options" id="menuOptions">
+        <li><a href="refa.html">Refacciones y accesorios</a></li>
+        <li><a href="acei.html">Aceites y lubricantes</a></li>
+    </ul>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menuOptions");
+            // Toggle visibility of the menu
+            if (menu.style.display === "none" || menu.style.display === "") {
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
