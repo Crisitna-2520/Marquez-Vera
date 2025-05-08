@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SERVICIOS</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            background-color: #aa3b3b;
+            display: flex;
+            justify-content: center;
+            margin-top: 80px; /* Añadir espacio para el logo */
+        }
+
+        ul li {
+            display: inline;
+        }
+
+        ul li a {
+            display: inline-block;
+            padding: 15px 20px;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+
+        ul li a:hover {
+            background-color: #ce7a7a;
+        }
+
+        h1 {
+            text-align: center;
+            color: #aa3b3b;
+        }
+
+        h2 {
+            color: #aa3b3b;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para logo en la esquina superior izquierda */
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+        }
+
+        /* Estructura en cuadrícula */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2 columnas */
+            gap: 20px; /* Espacio entre los elementos */
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        .services-grid .service {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        /* Estilo del botón */
+        .button-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .btn-agendar {
+            padding: 15px 30px;
+            background-color: #aa3b3b;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-agendar:hover {
+            background-color: #ce7a7a;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="Logo.png" alt="Logo de Moto Servicio Marquez Vera" width="100">
+    </div>
+
+    <!-- Barra de navegación -->
+    <ul>
+        <li><a href="Home.html">INICIO</a></li>
+        <li><a href="Tienda.html">TIENDA</a></li>
+        <li><a href="acercade.html">ACERCA DE</a></li>
+        <li><a href="servicios.html">SERVICIOS</a></li>
+        <li><a href="contacto.html">CONTACTO</a></li>
+    </ul>
+
+    <h1>SERVICIOS</h1>
+    <p>El cuidado de tu motocicleta siempre es importante para evitar accidentes y tener un correcto manejo, en nuestro taller certificado te ofrecemos los servicios profesionales para el cuidado adecuado de tu motocicleta.</p>
+
+    <!-- Cuadrícula de servicios -->
+    <div class="services-grid">
+        <div class="service">
+            <h2>Mantenimiento Preventivo</h2>
+            <p>Cambio de aceite de caja, cambio de bujías, limpieza de filtros, revisión general de frenos, calibración adecuada de aire, ajuste de tornillería, ajuste de chicotes.</p>
+        </div>
+        <div class="service">
+            <h2>Reparación de Motor</h2>
+            <p>Cilindro, Cigüeñal, árbol de levas, bomba de aceite, pistón, anillos, juntas, retenes y baleros de motor, tren secundario, cambio de válvulas, sellos, pistón.</p>
+        </div>
+        <div class="service">
+            <h2>Sistema Eléctrico</h2>
+            <p>Revisión caja de fusibles, líneas eléctricas, arnés, regulador, batería, estator, interruptor de freno, relevador de arranque, bulbos de stop, luces, claxon, capuchón de bujía.</p>
+        </div>
+        <div class="service">
+            <h2>Suspensión delantera</h2>
+            <p>Cambio de aceite de barras, retenes, ajuste de dirección, colocación de rueda delantera, alineación.</p>
+        </div>
+        <div class="service">
+            <h2>Frenos</h2>
+            <p>Cambio de balatas delanteras y traseras, lubricación de chicotes, cambio de líquido de frenos, limpieza de disco de frenado, revisión general de frenos preventiva.</p>
+        </div>
+        <div class="service">
+            <h2>Clutch</h2>
+            <p>Ajuste de clutch, limpieza y mantenimiento general.</p>
+        </div>
+    </div>
+
+    <!-- Botón de Agendar Cita -->
+    <div class="button-container">
+        <a href="cita.html" class="btn-agendar">Agenda tu Cita</a>
+    </div>
+</body>
+</html>
