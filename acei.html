@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Aceites</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #aa3b3b;
+        }
+
+        .product-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .product {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .product input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .product .quantity {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .quantity button {
+            padding: 5px 10px;
+            font-size: 16px;
+            background-color: #aa3b3b;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .quantity button:hover {
+            background-color: #ce7a7a;
+        }
+
+        .product .add-to-cart {
+            background-color: #aa3b3b;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .product .add-to-cart:hover {
+            background-color: #ce7a7a;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Tienda de Aceites y Lubricantes</h1>
+
+    <div class="product-container">
+        <!-- Producto 1 -->
+        <div class="product">
+            <img src="Aceite1.JPG" alt="Aceite 1">
+            <input type="text" placeholder="Nombre del producto">
+            <div class="quantity">
+                <button onclick="changeQuantity('quantity1', -1)">-</button>
+                <input type="text" id="quantity1" value="0" readonly>
+                <button onclick="changeQuantity('quantity1', 1)">+</button>
+            </div>
+            <button class="add-to-cart">Agregar al carrito</button>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="product">
+            <img src="Aceite2.JPG" alt="Aceite 2">
+            <input type="text" placeholder="Nombre del producto">
+            <div class="quantity">
+                <button onclick="changeQuantity('quantity2', -1)">-</button>
+                <input type="text" id="quantity2" value="0" readonly>
+                <button onclick="changeQuantity('quantity2', 1)">+</button>
+            </div>
+            <button class="add-to-cart">Agregar al carrito</button>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="product">
+            <img src="Aceite3.JPG" alt="Aceite 3">
+            <input type="text" placeholder="Nombre del producto">
+            <div class="quantity">
+                <button onclick="changeQuantity('quantity3', -1)">-</button>
+                <input type="text" id="quantity3" value="0" readonly>
+                <button onclick="changeQuantity('quantity3', 1)">+</button>
+            </div>
+            <button class="add-to-cart">Agregar al carrito</button>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="product">
+            <img src="Aceite4.PNG" alt="Aceite 4">
+            <input type="text" placeholder="Nombre del producto">
+            <div class="quantity">
+                <button onclick="changeQuantity('quantity4', -1)">-</button>
+                <input type="text" id="quantity4" value="0" readonly>
+                <button onclick="changeQuantity('quantity4', 1)">+</button>
+            </div>
+            <button class="add-to-cart">Agregar al carrito</button>
+        </div>
+    </div>
+
+    <script>
+        function changeQuantity(id, change) {
+            var quantityInput = document.getElementById(id);
+            var currentQuantity = parseInt(quantityInput.value);
+            var newQuantity = currentQuantity + change;
+
+            if (newQuantity >= 0) {
+                quantityInput.value = newQuantity;
+            }
+        }
+    </script>
+
+</body>
+</html>
